@@ -38,12 +38,12 @@ if (args.length != 1){
         console.log(" -i --idioma");
         process.exit(1);
     }
-    //verificamos el idioma
+    //verificamos el idioma, si no esta entre los idiomas disponibles agrega español por defecto
     if (!idiomasDisponibles.includes(idioma)){
         console.log("Error. Idioma no disponible");
         idioma = "es";
     }
-}else{
+}else{ //si solo se pasa el nombre, retorna en español por defecto
     idioma = "es";
 }
 // Verificamos que todos los campos se encuentren 
